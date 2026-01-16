@@ -1,0 +1,13 @@
+{
+  "profile": {
+    "name": "@lazuk",
+    "description": "QA Automation Engineer | Java | Kotlin",
+    "avatar": "/avatar.png",
+    "initials": "AL"
+  },
+  "links": [
+    { "title": "GitHub", "url": "https://github.com/zap4ick", "icon": "github" },
+    { "title": "LinkedIn", "url": "https://linkedin.com/in/andrei-lazuk", "icon": "linkedin" },
+    { "title": "E-mail", "url": "mailto:andrei@lazuk.me", "icon": "mail" }
+  ]
+}

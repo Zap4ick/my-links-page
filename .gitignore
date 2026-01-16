@@ -1,0 +1,10 @@
+# Ignoring all hidden
+.*
+# Except
+!.gitignore
+!.dockerignore
+!.github/
+#
+node_modules/
+index.js
+README-*

@@ -23,7 +23,7 @@ options:
 
 substitutions:
   _REGION: europe-central2
-  _IMAGE_PATH: ${_REGION}-docker.pkg.dev/${PROJECT_ID}/my-repo/my-site-image
+  _IMAGE_PATH: ${_REGION}-docker.pkg.dev/${PROJECT_ID}/main/my-site-image
 
 images:
   - '${_IMAGE_PATH}:latest'

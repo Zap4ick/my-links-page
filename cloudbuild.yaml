@@ -15,7 +15,8 @@ steps:
       - '${_IMAGE_PATH}:latest'
       - '--region'
       - '${_REGION}'
-      - '--platform managed'
+      - '--platform'
+      - 'managed' #default
       - '--allow-unauthenticated'
 
 options:

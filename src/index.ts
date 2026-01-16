@@ -1,40 +1,9 @@
-/*import express, { Request, Response } from 'express';
-
-const app = express();
-const port = process.env.PORT || 8080;
-
-interface Link {
-    title: string;
-    url: string;
-}
-
-const myLinks: Link[] = [
-    { title: "GitHub", url: "https://github.com/zap4ick" },
-    { title: "LinkedIn", url: "https://linkedin.com/in/andrei-lazuk/" },
-    { title: "Email", url: "mailto:andrei@lazuk.me"}
-];
-
-app.get('/', (req: Request, res: Response) => {
-    res.send(`<h1>Some of my links:</h1><ul>${myLinks.map(l => `<li><a href="${l.url}">${l.title}</a></li>`).join('')}</ul>`);
-});
-
-app.listen(port, () => {
-    console.log(`TS Server is running on port ${port}`);
-});*/
-
-
 import express, { Request, Response } from 'express';
 import { readFileSync } from 'fs';
 import { join } from 'path';
 
 const app = express();
 const port = process.env.PORT || 8080;
-
-interface Link {
-    title: string;
-    url: string;
-    icon: string; // Lucide icon
-}
 
 app.use(express.static('public'));
 
@@ -43,13 +12,6 @@ const getLinksData = () => {
     const rawData = readFileSync(filePath, 'utf-8');
     return JSON.parse(rawData);
 };
-
-/*const myLinks: Link[] = [
-    { title: "GitHub", url: "https://github.com/zap4ick", icon: "github" },
-    { title: "LinkedIn", url: "https://linkedin.com/in/andrei-lazuk", icon: "linkedin" },
-    //{ title: "Telegram", url: "https://t.me/your-profile", icon: "send" },
-    { title: "Email", url: "mailto:andrei@lazuk.me", icon: "mail" },
-];*/
 
 app.get('/', (req: Request, res: Response) => {
     const data = getLinksData();

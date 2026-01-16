@@ -18,6 +18,9 @@ steps:
       - '-platform managed'
       - '--allow-unauthenticated'
 
+options:
+  logging: CLOUD_LOGGING_ONLY
+
 substitutions:
   _REGION: europe-central2
   _IMAGE_PATH: ${_REGION}-docker.pkg.dev/${PROJECT_ID}/my-repo/my-site-image

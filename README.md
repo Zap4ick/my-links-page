@@ -2,3 +2,4 @@
 
 # My links page
 Simple links homepage written in TypeScript.
+Please note that every push to master triggers a build and deploy in GCloud.

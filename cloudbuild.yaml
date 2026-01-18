@@ -1,9 +1,9 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', '${_IMAGE_PATH}:latest', '.']
+    args: ['build', '-t', '${_REGION}-docker.pkg.dev/${PROJECT_ID}/main/${_IMAGE_NAME}:latest', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', '${_IMAGE_PATH}:latest']
+    args: ['push', '${_REGION}-docker.pkg.dev/${PROJECT_ID}/main/${_IMAGE_NAME}:latestt']
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
@@ -12,7 +12,7 @@ steps:
       - 'deploy'
       - 'my-site'
       - '--image'
-      - '${_IMAGE_PATH}:latest'
+      - '${_REGION}-docker.pkg.dev/${PROJECT_ID}/main/${_IMAGE_NAME}:latest'
       - '--region'
       - '${_REGION}'
       - '--platform' #default
@@ -24,7 +24,8 @@ options:
 
 substitutions:
   _REGION: europe-central2
-  _IMAGE_PATH: europe-central2-docker.pkg.dev/${PROJECT_ID}/main/my-site-image
+  _IMAGE_NAME: my-site-image
+  #_IMAGE_PATH: europe-central2-docker.pkg.dev/${PROJECT_ID}/main/my-site-image
 
 images:
   - '${_IMAGE_PATH}:latest'

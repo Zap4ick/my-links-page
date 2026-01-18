@@ -28,4 +28,4 @@ substitutions:
   #_IMAGE_PATH: europe-central2-docker.pkg.dev/${PROJECT_ID}/main/my-site-image
 
 images:
-  - '${_IMAGE_PATH}:latest'
+  - '${_REGION}-docker.pkg.dev/${PROJECT_ID}/main/${_IMAGE_NAME}:latest'

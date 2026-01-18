@@ -18,6 +18,10 @@ steps:
       - '--platform' #default
       - 'managed' #default
       - '--allow-unauthenticated'
+      - '--min-instances' #default
+      - '0' #default
+      - '--max-instances'
+      - '5'
 
 options:
   logging: CLOUD_LOGGING_ONLY

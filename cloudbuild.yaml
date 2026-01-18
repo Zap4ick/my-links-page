@@ -3,7 +3,7 @@ steps:
     args: ['build', '-t', '${_REGION}-docker.pkg.dev/${PROJECT_ID}/main/${_IMAGE_NAME}:latest', '.']
 
   - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', '${_REGION}-docker.pkg.dev/${PROJECT_ID}/main/${_IMAGE_NAME}:latestt']
+    args: ['push', '${_REGION}-docker.pkg.dev/${PROJECT_ID}/main/${_IMAGE_NAME}:latest']
 
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud

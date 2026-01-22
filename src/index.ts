@@ -58,12 +58,9 @@ app.get('/', (req: Request, res: Response) => {
                 <nav>
                     ${linksHtml}
                 </nav>
-
-                <footer class="mt-12 text-center text-gray-500 text-sm">
-                    &copy; 2026 lazuk.me
-                </footer>
                 
-                <footer class="mt-12 pb-6 text-center text-slate-500 text-xs border-t border-slate-800 pt-4">
+                <footer class="mt-12 text-center text-gray-500 text-sm">
+                    <p>&copy; 2026 lazuk.me</p>
                     <p>Last update: <span class="text-slate-400 font-mono">${lastUpdated}</span></p>
                     <p class="mt-1 opacity-50">Deployed via GitHub Actions & Cloud Build</p>
                 </footer>

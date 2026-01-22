@@ -10,7 +10,7 @@ steps:
     args:
       - 'run'
       - 'deploy'
-      - 'my-site'
+      - 'my-site-image'
       - '--image'
       - '${_REGION}-docker.pkg.dev/${PROJECT_ID}/main/${_IMAGE_NAME}:latest'
       - '--region'

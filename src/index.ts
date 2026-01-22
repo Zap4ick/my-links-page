@@ -38,6 +38,7 @@ app.get('/', (req: Request, res: Response) => {
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Lazuk | Links</title>
+            <link rel="icon" type="image/svg+xml" href="https://unpkg.com/lucide-static@latest/icons/sticker.svg">
             <script src="https://cdn.tailwindcss.com"></script>
             <script src="https://unpkg.com/lucide@latest"></script>
             <style>

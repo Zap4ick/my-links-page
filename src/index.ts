@@ -31,6 +31,8 @@ app.get('/', (req: Request, res: Response) => {
         </a>
     `).join('');
 
+    const lastUpdated = process.env.LAST_UPDATED;
+
     res.send(`
         <!DOCTYPE html>
         <html lang="en" class="dark">
@@ -59,6 +61,11 @@ app.get('/', (req: Request, res: Response) => {
 
                 <footer class="mt-12 text-center text-gray-500 text-sm">
                     &copy; 2026 lazuk.me
+                </footer>
+                
+                <footer class="mt-12 pb-6 text-center text-slate-500 text-xs border-t border-slate-800 pt-4">
+                    <p>Last update: <span class="text-slate-400 font-mono">${lastUpdated}</span></p>
+                    <p class="mt-1 opacity-50">Deployed via GitHub Actions & Cloud Build</p>
                 </footer>
             </div>
 

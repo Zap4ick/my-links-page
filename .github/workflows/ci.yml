@@ -27,8 +27,6 @@ jobs:
     - name: 'Set up Cloud SDK'
       uses: 'google-github-actions/setup-gcloud@v2'
 
-      # 7. Запуск деплоя через Cloud Build
-      # Мы используем твой готовый cloudbuild.yaml
     - name: 'Deploy to Cloud Run via Cloud Build'
       run: |
         gcloud builds submit --config cloudbuild.yaml .

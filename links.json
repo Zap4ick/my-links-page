@@ -6,8 +6,11 @@
     "initials": "AL"
   },
   "links": [
-    { "title": "GitHub", "url": "https://github.com/zap4ick", "icon": "github" },
     { "title": "LinkedIn", "url": "https://linkedin.com/in/andrei-lazuk", "icon": "linkedin" },
-    { "title": "E-mail", "url": "mailto:andrei@lazuk.me", "icon": "mail" }
+    { "title": "GitHub", "url": "https://github.com/zap4ick", "icon": "github" },
+    { "title": "E-mail", "url": "mailto:andrei@lazuk.me", "icon": "mail" },
+    { "title": "E-mail", "url": "https://www.discogs.com/user/zap4ick", "icon": "disc-3" },
+    { "title": "E-mail", "url": "https://last.fm/user/zap4ick", "icon": "cassette-tape" },
+    { "title": "E-mail", "url": "https://letterboxd.com/Zap4ick/", "icon": "film" }
   ]
 }

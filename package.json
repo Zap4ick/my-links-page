@@ -2,7 +2,9 @@
   "name": "links-page",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": { "build": "tsc" },
+  "scripts": {
+    "build": "tsc"
+  },
   "dependencies": {
     "express": "^5.2.1"
   },
@@ -15,6 +17,6 @@
     "@types/express": "^5.0.6",
     "@types/node": "^25.0.9",
     "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   }
 }

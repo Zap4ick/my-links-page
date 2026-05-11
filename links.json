@@ -1,13 +1,13 @@
 {
   "profile": {
     "name": "@lazuk",
-    "description": "QA Automation Engineer | Java | Kotlin",
+    "description": "QA Automation Engineer | Java | Kotlin | TS",
     "avatar": "/avatar.png",
     "initials": "AL"
   },
   "links": [
-    { "title": "LinkedIn", "url": "https://linkedin.com/in/andrei-lazuk", "icon": "linkedin" },
-    { "title": "GitHub", "url": "https://github.com/zap4ick", "icon": "github" },
+    { "title": "LinkedIn", "url": "https://linkedin.com/in/andrei-lazuk", "icon": "network" },
+    { "title": "GitHub", "url": "https://github.com/zap4ick", "icon": "folder-root" },
     { "title": "E-mail", "url": "mailto:andrei@lazuk.me", "icon": "mail" },
     { "title": "Discogs", "url": "https://www.discogs.com/user/zap4ick", "icon": "disc-3" },
     { "title": "Last.fm", "url": "https://last.fm/user/zap4ick", "icon": "cassette-tape" },

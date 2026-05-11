@@ -1,26 +1,28 @@
-import express, { Request, Response } from 'express';
-import { readFileSync } from 'fs';
-import { join } from 'path';
+import express, { Request, Response } from "express";
+import { readFileSync } from "fs";
+import { join } from "path";
 
 const app = express();
 const port = process.env.PORT || 8080;
 
-app.use(express.static('public'));
+app.use(express.static("public"));
 
 const getLinksData = () => {
-    const filePath = join(process.cwd(), 'links.json');
-    const rawData = readFileSync(filePath, 'utf-8');
-    return JSON.parse(rawData);
+  const filePath = join(process.cwd(), "links.json");
+  const rawData = readFileSync(filePath, "utf-8");
+  return JSON.parse(rawData);
 };
 
-app.get('/', (req: Request, res: Response) => {
-    const data = getLinksData();
+app.get("/", (req: Request, res: Response) => {
+  const data = getLinksData();
 
-    const avatarHtml = data.profile.avatar 
-        ? `<img src="${data.profile.avatar}" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-blue-500 shadow-lg" alt="Avatar">`
-        : `<div class="w-24 h-24 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-bold">${data.profile.initials}</div>`;
+  const avatarHtml = data.profile.avatar
+    ? `<img src="${data.profile.avatar}" class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-blue-500 shadow-lg" alt="Avatar">`
+    : `<div class="w-24 h-24 bg-gradient-to-tr from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center text-3xl font-bold">${data.profile.initials}</div>`;
 
-    const linksHtml = data.links.map((link: any) => `
+  const linksHtml = data.links
+    .map(
+      (link: any) => `
         <a href="${link.url}"  
            class="flex items-center justify-between w-full p-4 mb-4 bg-gray-800 border border-gray-700 rounded-xl hover:scale-[1.02] transition-transform duration-200 group">
             <div class="flex items-center">
@@ -29,11 +31,13 @@ app.get('/', (req: Request, res: Response) => {
             </div>
             <i data-lucide="external-link" class="w-5 h-5 text-gray-500 group-hover:text-gray-300"></i>
         </a>
-    `).join('');
+    `,
+    )
+    .join("");
 
-    const lastUpdated = process.env.LAST_UPDATED;
+  const lastUpdated = process.env.LAST_UPDATED;
 
-    res.send(`
+  res.send(`
         <!DOCTYPE html>
         <html lang="en" class="dark">
         <head>
@@ -52,7 +56,7 @@ app.get('/', (req: Request, res: Response) => {
                 <div class="text-center mb-8">
                    ${avatarHtml}
                     <h1 class="text-2xl font-bold">@lazuk</h1>
-                    <p class="text-gray-400 mt-2">QA Automation Engineer | Java | Kotlin</p>
+                    <p class="text-gray-400 mt-2">${data.profile.description}</p>
                 </div>
 
                 <nav>
@@ -75,5 +79,5 @@ app.get('/', (req: Request, res: Response) => {
 });
 
 app.listen(port, () => {
-    console.log(`Stylish TS Server is running on port ${port}`);
+  console.log(`Stylish TS Server is running on port ${port}`);
 });
